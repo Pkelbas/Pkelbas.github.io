@@ -1,0 +1,109 @@
+body {
+    background-color: rgba(255, 120, 51, 0.3);
+    margin: 0;
+    line-height: 1.2;
+    font-family: Palatino, serif;
+}
+
+.site-name {
+    margin: 0;
+    font-size: 25px;
+    font-weight: lighter;
+    font-family: Trattatello, fantasy;
+}
+
+.site-img{
+    mix-blend-mode: multiply;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+
+.main-top-left{
+    clear: both;
+    font-size: 1rem;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.sidebar{
+    width: 200px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    padding-top: 20px;
+    background-color: rgba(255, 180, 50, 0.4);
+}
+
+.body-main {
+    border: ridge #fce123;
+    padding-left: 20px;
+    margin-left: 200px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    margin: 0 0.6em 0 0.7em;
+    padding: 0.25em 0;
+}
+
+.nav-header{
+    margin: 0.5em 0 0 0.66666667em;
+    border: 0;
+    padding: 0.25em 0;
+    font-size: 15px;
+    font-weight: normal;
+    cursor: default;
+    background-image: linear-gradient(to right,rgba(200,204,209,0) 0, #ff7133 33%, #fce123 66%,rgba(200,204,209,0) 100%);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
+
+li{
+    list-style: none;
+}
+
+.main-section{
+    display: flex;
+    flex-direction: row;
+    direction: ltr;
+}
+
+.child-section{
+    width: 50%;
+}
+
+.section-img{
+    mix-blend-mode: multiply;
+    margin: 5px;
+    border: none;
+    outline: none;
+    float:right;
+}
+
+footer{
+    margin-left: 200px;
+    flex-shrink: 0;
+}
+
+.section-header{
+    margin: 0.5em 0 0 0.66666667em;
+    border: 0;
+    padding: 0.25em 0;
+    font-size: 25px;
+    font-weight: normal;
+    cursor: default;
+    background-image: linear-gradient(to right,rgba(200,204,209,0) 0, #ff4767 33%, #ff5e47 66%,rgba(200,204,209,0) 100%);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
+
+.list-element-p{
+    margin-left: 20px;
+    font-size: 14px;
+}
