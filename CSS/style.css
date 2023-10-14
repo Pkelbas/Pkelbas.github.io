@@ -107,3 +107,23 @@ footer{
     margin-left: 20px;
     font-size: 14px;
 }
+
+.table-third-task {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.table-third-task tbody tr:nth-child(even){
+    background-color: rgba(243, 77, 8, 0.5);
+    font-size: 30px;
+}
+
+.table-third-task tbody tr:nth-child(odd){
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
