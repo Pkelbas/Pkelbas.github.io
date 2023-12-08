@@ -36,22 +36,33 @@
 <main class="main-flex">
     <div class="title">
         <h2>
-            Избранная статья
+            Список литературы
         </h2>
     </div>
+
     <div class="main-section">
         <section class="child-section">
-            <h3 class="section-header">Катастрофа Бронзового Века</h3>
-            <img src="../images/catastophe.png" class="section-img" width="40%">
-            <p class="list-element-p">
-                Катастро́фа бро́нзового ве́ка (бронзовый коллапс) — термин,
-                которым археологи и историки обозначают переход от бронзового
-                к железному веку на древнем Ближнем Востоке и в Восточном Средиземноморье
-                (Левант, Малая Азия и Греция) в XII веке до н. э.
-                Смена эпох в этом регионе была связана с катастрофическими изменениями в общественном укладе,
-                утратой многих производственных и культурных традиций, в том числе письменности,
-                разрушением всех крупных государств и многих городов того времени.
-            </p>
+            <h3 class="section-header">Найти</h3>
+            <br>
+            <form id="bookForm">
+                <label for="culture">Культура:</label>
+                <select id="culture" name="culture" class="select">
+                    <option value=""></option>
+                    <option value="Египет">Египет</option>
+                    <option value="Шумер">Шумер</option>
+                    <option value="Аккад">Аккад</option>
+                    <option value="Хетты">Хетты</option>
+                </select>
+                <label for="yearFrom">Год д.н. от:</label>
+                <input type="number" id="yearFrom" name="yearFrom" class="input">
+                <label for="yearTo">Год д.н. до:</label>
+                <input type="number" id="yearTo" name="yearTO" class="input">
+                <input type="submit" value="Найти" class="input">
+            </form><br>
+            <button onclick="save()" class="input">Сохранить</button>
+            <button onclick="load()" class="input">Загрузить</button>
+            <div id="bookTable"></div>
+            <script src="../script/book_table.js"></script>
         </section>
     </div>
 </main>
