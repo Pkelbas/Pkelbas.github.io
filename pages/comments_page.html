@@ -37,17 +37,17 @@
 <main class="main-flex">
     <div class="title">
         <h2>
-            Популярные статьи
+            Отзывы
         </h2>
-    </div>
-    <div class="main-section">
-        <section class="child-section">
-            <h3 class="section-header">Древний Египет</h3>
-            <p class="list-element-p">
-                Название исторического региона и культуры значительной цивилизации Древнего мира,
-                существовавшей на северо-востоке Африки вдоль нижнего течения реки Нил.
-            </p>
-        </section>
+        <div class="main-section">
+            <section class="child-section">
+                <button id="comment-button" class="input">Случайный комментарий</button>
+                <div class="preloader" id="preloader"></div>
+                <div id="comments-container"></div>
+                <div id="error-message"></div>
+                <script src="../script/comment.js"></script>
+            </section>
+        </div>
     </div>
 </main>
 </body>
