@@ -228,3 +228,11 @@ th, td {
     }
 }
 
+#error-message{
+    color: red;
+}
+
+#comments-container{
+    color: #b91111;
+}
+

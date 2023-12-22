@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', function () {
     var currentId = 1;
     var commentButton = document.getElementById('comment-button');
 
+    function Toast(type, css, msg) {
+        this.type = type;
+        this.css = css;
+        this.msg = msg;
+    }
+
+
     function fetchAndUpdateText() {
         var commentsContainer = document.getElementById('comments-container');
         var preloader = document.getElementById('preloader');
@@ -18,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function () {
         commentsContainer.style.display = 'none';
         errorMessage.style.display = 'none';
         preloader.style.display = 'block';
-
+        var t = new Toast('info', 'toast-top-right','Pending...');
+        toastr.options.positionClass = t.css;
+        toastr[t.type](t.msg);
         fetch('https://jsonplaceholder.typicode.com/comments/' + currentId)
             .then(function (response) {
                 if (!response.ok) {
@@ -27,12 +36,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(function (data) {
+                var t = new Toast('success', 'toast-top-right','Success!');
+                toastr.options.positionClass = t.css;
+                toastr[t.type](t.msg);
                 commentsContainer.innerHTML = '<p>' + data.body + '</p>';
                 commentsContainer.style.display = 'block';
                 preloader.style.display = 'none';
                 errorMessage.style.display = 'none';
             })
             .catch(function (error) {
+                var t = new Toast('error', 'toast-top-right','Error!');
+                toastr.options.positionClass = t.css;
+                toastr[t.type](t.msg);
                 console.error('Error:', error);
                 preloader.style.display = 'none';
                 commentsContainer.style.display = 'none';
