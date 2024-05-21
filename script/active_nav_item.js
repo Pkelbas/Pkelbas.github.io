@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (navLinks[i].href === url) {
             navLinks[i].parentNode.classList.add('current-nav-item');
             break;
+
         }
     }
 });
